@@ -13,6 +13,9 @@ puts 'destroy all data'
 Cocktail.destroy_all
 Ingredient.destroy_all
 
+url = "https://res.cloudinary.com/ddkl3olru/image/upload/v1558100815/qv7nat4uzrrxvfxewl3a.jpg"
+cocktail = Cocktail.create(name: 'new-cocktail', remote_photo_url: url)
+
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 parsing = open(url).read

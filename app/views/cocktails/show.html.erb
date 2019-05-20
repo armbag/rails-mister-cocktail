@@ -3,6 +3,8 @@
   <h1><%= @cocktail.name %></h1>
   <p>Find me in app/views/cocktails/show.html.erb</p>
 
+  <%= cl_image_tag @cocktail.photo, height: 600, width: 800, crop: :fill %>
+
   <% @cocktail.doses.each do |i| %>
     <%= i.ingredient.name %>
     <%= i.description %>
